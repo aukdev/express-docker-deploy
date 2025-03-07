@@ -1,0 +1,24 @@
+services:
+  auk_server:
+    build: .
+    ports:
+      - "5000:4000"
+    environment:
+      - NODE_ENV=production
+      - DATABASE_URL=postgresql://username:yourpass@server_db:5432/my_db?schema=public
+    depends_on:
+      - server_db
+    command: sh -c "npx prisma migrate deploy && npm start"
+
+  server_db:
+    image: postgres:latest
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: yourpass
+      POSTGRES_USER: username
+      POSTGRES_DB: my_db
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+volumes:
+  pgdata:
