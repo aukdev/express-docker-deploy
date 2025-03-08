@@ -9,7 +9,7 @@ services:
       - PORT=4000
     depends_on:
       - server_db
-    command: sh -c "npx prisma migrate dev --name init && npm start"
+    command: sh -c "npx prisma migrate deploy && npm start"
 
   server_db:
     image: postgres:latest
