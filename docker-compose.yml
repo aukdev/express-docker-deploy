@@ -5,7 +5,7 @@ services:
       - "5000:4000"
     environment:
       - NODE_ENV=production
-      - DATABASE_URL=postgresql://amila:userpass@server_db:5430/server_db?schema=public
+      - DATABASE_URL=postgresql://amila:userpass@server_db:5432/server_db?schema=public
       - PORT=4000
     depends_on:
       - server_db
