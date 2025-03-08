@@ -7,7 +7,7 @@ import DB from "../db/db.mjs";
 const userRouter = Router();
 
 userRouter.get("/test", (_: Request, w: Response<{ msg: string }>): void => {
-    w.status(200).send({msg: "test"});
+    w.status(200).send({msg: "hi auk wijesinghe"});
 })
 
 userRouter.get('/all-users', async (_: Request, w: Response<{ data: User[] | null }>): Promise<void> => {

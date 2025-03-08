@@ -1,0 +1,15 @@
+### GET request to example server
+GET https://examples.http-client.intellij.net/get
+    ?generated-in=WebStorm
+
+###
+POST http://13.228.79.28:5000/api/v1/user/create-user
+Content-Type: application/json
+
+{
+  "name": "amila",
+  "username": "amila",
+  "password": "mypass",
+  "phone": "0762176173",
+  "city": "Matara"
+}

@@ -11,5 +11,6 @@ yarn-error.log*
 package-lock.json
 /dist
 /.idea
+api.http
 
 .vscode/*
